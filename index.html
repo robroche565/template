@@ -1,0 +1,533 @@
+<html>
+
+<head>
+    <TITLE>jsPDF HTML Example with html2canvas for Multiple Pages PDF</TITLE>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/syllabus.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #doc-target {
+            -webkit-font-smoothing: antialiased;
+            color: #000;
+            line-height: 1.6em;
+            margin: 0 auto;
+        }
+
+        #outer {
+            padding: 72pt 72pt 72pt 72pt;
+            border: 1px solid #000;
+            margin: 0 auto;
+            width: 1600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>
+            <button class="btn btn-dark" onclick="generatePdf()">Download PDF</button>
+        </p>
+        <div id="outer">
+            <div id="doc-target">
+                <div id="lipsum">
+                    <div class="syllabus">
+                        <div class="gfg">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div style="display:inline-block;vertical-align:top; padding-bottom:50px;">
+                                        <img src="images/school_logo.JPG" alt="school_logo" class="logo"/>
+                                        <img src="images/college_logo.JPG" alt="school_logo" class="logo"/>
+                                    </div>
+                                    <div class="lists" style="display:inline-block; font-size:20px">
+                                        Republic of the Philippines <br>
+                                        Western Mindanao State University<br>
+                                        <span>Institute of Computer Studies</span> <br>
+                                        <span class="fw-bold">DEPARTMENT OF COMPUTER SCIENCE</span>
+                                    </div>
+                                </div>
+                                <div class="col-4 header_info">
+                                    <div class="row">
+                                        <div class="col lists">
+                                        Semester Adopted: <br>
+                                        Revision Status:<br>
+                                        Revision Date:<br>
+                                        Recommending Approval:<br>
+                                        Concurred:<br>
+                                        Approved:
+                                        </div>
+                                        <div class="col lists fw-bold">
+                                        <span>Sem: 1st S.Y.: 2021-2022</span><br>
+                                        <span>1st Draft</span><br>
+                                        <span>July 19, 2021</span><br>
+                                        <span>Engr. Odon A. Maravillas Jr.</span><br>
+                                        <span>Dr. Roderick P. Go</span><br>
+                                        <span>Dr. Nursia M. Barjose</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="content_body">
+                                <title_syllabus style="font-size:20px">
+                                    <p class="title">OUTCOMES-BASED EDUCATION (OBE) RESTRUCTURED COURSE SYLLABUS IN SOFTWARE ENGINEERING 1</p>
+                                    <p class="sub-text">1st Semester, SY 2021-2022</p>
+                                </title_syllabus>
+                                <br>
+                                <br>
+                                <div class="two-row" style="font-size:20px">
+                                    <p style="font-weight: 900;"><strong>Western Mindanao State University</strong></p>
+                                    <p style="font-weight: bold;">VISION</p>
+                                    <p>The University of Choice for higher learning with strong research orientation that produces professionals who are socially responsive to and responsible for human development; ecological sustainability; and, peace and security within and beyond the region.</p>
+                                    <p style="font-weight: bold;">MISSION</p>
+                                    <p>The Western Mindanao State University, set in a culturally diverse environment, shall pursue a vibrant socio-economic agenda that includes:</p>
+                                    <ul>
+                                        <li>A relevant instruction paradigm in the education and training of competent and responsive human resource for societal and industry needs;</li>
+                                        <li>A home for intellectual formation that generates knowledge for people empowerment, social transformation, and sustainable development; and;</li>
+                                        <li>A hub where science, technology, and innovation flourish enriched by the wisdom of the Arts and Letters, and Philosophy.</li>
+                                    </ul>
+                                    <p style="font-weight: bold;">Institute of Computer Studies</p>
+                                    <p style="font-weight: bold;">GOALS</p>
+                                    <p>The institute shall provide academic excellence in the field of Information and Communication Technology, with emphasis on the following goals:</p>
+                                    <ol type="a">
+                                        <li>Produce quality, excellent and eco-friendly graduates imbued with gender responsiveness.</li>
+                                        <li>Achievement of the highest level of accreditation and center of excellence imbued with outcomes-based education.</li>
+                                        <li>Partner with national and international industries as an outlet for research development and extension.</li>
+                                        <li>Support faculty members through faculty development programs to be competitive with the highest global standards.</li>
+                                    </ol>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                                <outcomes>
+                                    <!-- college outcomes start -->
+                                    <table class="outcomes">
+                                        <tr>
+                                            <th rowspan="2" colspan="2" style="padding-left: 1%; background-color:rgb(245, 245, 245);">Bachelor of Science in Computer Science Program Outcomes</th>
+                                            <th colspan="4" class="text-center" style="width: 300px; background-color:rgb(245, 245, 245);">Goals</th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <td style="background-color:rgb(245, 245, 245);">A</td>
+                                            <td style="background-color:rgb(245, 245, 245);">B</td>
+                                            <td style="background-color:rgb(245, 245, 245);">C</td>
+                                            <td style="background-color:rgb(245, 245, 245);">D</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">A.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">B.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">C.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">D.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                    </table>
+                                    <!-- college outcomes end -->
+
+                                    <!-- info of outcomes start -->
+                                    <table class="info_outcomes">
+                                        <tr>
+                                            <td class="text-uppercase">Course Code</td>
+                                            <td>CS 137</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase">Course Name</td>
+                                            <td>Subject Subject</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase">Prerequisite</td>
+                                            <td>CS 121 – Object Oriented Programming, CC 104 – Information Management</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase">Course Credit</td>
+                                            <td>3 Units (2 Units Lecture and 1 Unit Laboratory/2hrs. Lecture + 3hrs. Laboratory = 5hrs/week)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-uppercase cs_desc">Course Description</td>
+                                            <td>Software engineering is an engineering discipline in which the aim is the production of software products, delivered on time and within a set budget, that satisfies the client’s needs. It covers all aspects of software development ranging from the early stage of product concept to design and implementation to post-delivery maintenance. This course introduces the 3 major stages of software development, planning, analysis, and design. At the end of this course, the students should be able to present the system prototype and its documentation</td>
+                                        </tr>
+                                    </table>
+                                    <!-- info of outcomes end -->
+                                    <br>
+
+                                    <!-- course outcomes start -->
+                                    <table class="outcomes">
+                                        <tr>
+                                            <th rowspan="2" colspan="2" style="padding-left: 1%; background-color:rgb(245, 245, 245);">Course Learning Outcomes</th>
+                                            <th colspan="4" class="text-center" style="width: 300px; background-color:rgb(245, 245, 245);">Program Outcomes</th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <td style="background-color:rgb(245, 245, 245);">A</td>
+                                            <td style="background-color:rgb(245, 245, 245);">B</td>
+                                            <td style="background-color:rgb(245, 245, 245);">C</td>
+                                            <td style="background-color:rgb(245, 245, 245);">D</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">A.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">B.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">C.</td>
+                                            <td style="border-left: none;">text text text text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">D.</td>
+                                            <td style="border-left: none;">text text tet text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">E.</td>
+                                            <td style="border-left: none;">text text tet text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">F.</td>
+                                            <td style="border-left: none;">text text tet text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="letter_cell">G.</td>
+                                            <td style="border-left: none;">text text tet text text text text text text text text text text text</td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                            <td class="text-center"><img src="images/check.png" style="width: 15px;"></td>
+                                        </tr>
+                                    </table>
+                                    <!-- course outcomes end -->
+
+                                    <br>
+                                    <!-- references -->
+                                    <table class="outcomes">
+                                        <tr>
+                                            <td class="letter_cell" style="width: 220px; font-size:20px; font-weight:bold;">References</td>
+                                            <td>SOFTWARE ENGINEERING (Ninth Edition) by Ian Sommerville <br>
+                                                FUNDAMENTALS OF PROJECT MANAGEMENT (4th Edition) by Joseph Heagney<br>
+                                                PROJECT COST MANAGEMENT by Free Management E-Book <br>
+                                                A PRACTICAL GUIDE TO WRITING A FEASIBILITY STUDY (1st Edition) by Ndalahwa Masanja, 2020 <br>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- references -->
+                                </outcomes>
+
+                                <br>
+
+                                <grading_sys style="font-size: 20px">
+                                    <p style="font-weight: bold;">Grading System</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <!-- midterm term grade -->
+                                            <p style="font-weight: bold;">Midterm Grade (30%) </p>
+                                            <table style="font-size: 21px; margin-top:-16px;">
+                                                <tr>
+                                                    <td style="vertical-align: top;">Lecture Grade (30%)</td>
+                                                    <td style="padding-left: 65px;">Attendance (10%)<br>
+                                                        Assignments (20%)<br>
+                                                        Quizzes (30%)<br>
+                                                        Major Exam (40%)<br>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="font-size: 21px;">
+                                                <tr>
+                                                    <td style="vertical-align: top;">Laboratory Grade (70%)</td>
+                                                    <td style="padding-left: 35px;">Lab Activities (10%)<br>
+                                                        Project Documentation (20%)<br>
+                                                        Presentation (70%) <br>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- midterm term grade -->
+
+                                            <!-- final term grade -->
+                                            <p style="font-weight: bold;">Final term Grade (70%) </p>
+                                            <table style="font-size: 21px; margin-top:-16px;">
+                                                <tr>
+                                                    <td style="vertical-align: top;">Lecture Grade (30%)</td>
+                                                    <td style="padding-left: 65px;">Attendance (10%)<br>
+                                                        Assignments (20%)<br>
+                                                        Quizzes (30%)<br>
+                                                        Major Exam (40%)<br>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="font-size: 21px;">
+                                                <tr>
+                                                    <td style="vertical-align: top;">Laboratory Grade (70%)</td>
+                                                    <td style="padding-left: 35px;">Lab Activities (10%)<br>
+                                                        Project Documentation (20%)<br>
+                                                        Presentation (70%) <br>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- final term grade -->
+
+                                            <!-- final rating grade -->
+                                            <br>
+                                            <table style="font-size: 21px;">
+                                                <tr>
+                                                    <td style="vertical-align: top; font-weight:bold; width:178px;">Final Rating</td>
+                                                    <td style="padding-left: 65px;">Midterm Grade</td>
+                                                    <td style="padding-left: 65px;">30%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td style="padding-left: 65px;">Final Term Grade</td>
+                                                    <td style="padding-left: 65px;">70%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td style="padding-left: 65px; font-weight:bold;">100%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td style="padding-left: 65px; font-weight:bold;">PASSING GRADE</td>
+                                                    <td style="padding-left: 65px; font-weight:bold;">60%</td>
+                                                </tr>
+                                            </table>
+                                            <!-- final rating grade -->
+
+                                        </div>
+                                        <div class="col" style="margin-left: -173px;">
+                                            <table class="equi_num">
+                                                <thead>
+                                                    <tr>
+                                                        <th>% EQUIVALENT</th>
+                                                        <th>NUMERICAL RATING</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>96-100</td>
+                                                        <td>1.0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>91-95</td>
+                                                        <td>1.25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>86-90</td>
+                                                        <td>1.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>81-85</td>
+                                                        <td>1.75</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>76-80</td>
+                                                        <td>2.0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>71-75</td>
+                                                        <td>2.25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>66-70</td>
+                                                        <td>2.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>62-65</td>
+                                                        <td>2.75</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>60-61</td>
+                                                        <td>3.0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Below 60/Failed the Panel Defense</td>
+                                                        <td>5.0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Lacks requirements/no final exam/no presentation</td>
+                                                        <td>INC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Authorized Withdrawal (Dropped with permit)</td>
+                                                        <td>AW</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Unauthorized Withdrawal (Dropped from class for nonattendance/non-appearance for 20% of prescribed attendance)</td>
+                                                        <td>UW</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br>
+
+                                            <p>Sample Computation <br>
+                                            Score/Totalx 100 <br>
+                                            40/50 x 100 = 80.0</p>
+                                        </div>
+                                    </div>
+                                </grading_sys>
+                                <br>
+                                <br>
+                                <br>
+
+                                <clss_req>
+                                    <p class="text-bold">Course Requirements</p>
+                                    <ul class="text-normal">
+                                        <li>Assignments</li>
+                                        <li>Quizzes</li>
+                                        <li>Major Exam </li>
+                                        <li>Lab Activities</li>
+                                        <li>Consultation</li>
+                                        <li>Acceptable Software Prototype</li>
+                                        <li>Midterm and Final Oral Presentation</li>
+                                    </ul>
+                                </clss_req>
+                                <br>
+
+                                <div>
+                                    <table class="class_pol">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-size: 20px;"><strong>Classroom Policy</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Attendance:</strong> Per article 286 of the WMSU code, regular attendance is required of all students. Attendance is counted upon the first day of regular classes, regardless of the time of the student’s enrolment. Students who came into class within 15 minutes after the start time will still be considered present; otherwise, the student will be marked as late. Seven consecutive absences may be a ground for students to be dropped in the subject. Students who cannot attend either face-to-face or online class due to illness must contact the instructor immediately regarding the absence and discuss any activities missed in the class.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Wearing of Prescribed School Uniform and ID:</strong> Per article 391 of the WMSU code, every student must wear the prescribed college uniform unless, for certain valid reasons, s/he has written exemption from the Dean of Student Affairs which s/he must show on demand. Students are exempted from wearing their school uniforms during Wednesdays and Saturdays since these days are considered a wash day. Students are also required to wear their school ID when inside the campus, at all times. For online classes via video conferences, students are not required to wear their school uniform and advise to wear any appropriate attire. </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Cleanliness and Room Organization:</strong>  For lecture and laboratory, students are advised to arrange the chairs and tables (if any), and pick up pieces of trash before the start of the class. A student is also assigned at random to keep the white or blackboard clean before and after the class. Lighting, air conditioners, and other electrical equipment should also be turned on and off during and after the class respectively. An additional rule for the laboratory is that students are required to wear their shoe protectors when coming into the laboratory room. During online classes, students are expected to attend their classes in a quiet place. </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Seat Plan:</strong>For the seating plan during lecture classes, students are given the freedom to choose the seat and place they are comfortable with inside the room. For the laboratory, if the instructor deems it necessary, students are rearranged randomly. There should be one computer for each student.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <br>
+                                    <table class="class_pol_2">
+                                        <tbody>
+                                            <tr>
+                                                <td class="content_pol"><strong>Cellphone/Mobile Devices:</strong>  Cellular phones or any mobile device should be set to silent or vibrate mode to avoid disruption especially during face-to-face class discussion. Important calls and texts must be answered outside the classroom. Students are permitted to use their mobile phones when attending their online classes. The use of laptops/computers is recommended for a better learning experience.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Student Facilitators:</strong>Student facilitators are selected from the class by the teacher. These students will assist their classmates in accomplishing the laboratory activity given by the teacher. This is done only upon the instruction of the teacher and also applicable during online classes but not to the extent of sharing/copying answers.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Quizzes:</strong>Quizzes are given to students at least once after a chapter or two which should be announced. Students are advised to use the CET Exam Booklet during quizzes. For online quizzes/exams, students will take the quiz/exam through the Learning Management System platform, questions and options are shuffled, navigation is disabled if necessary. Quiz/exam is always time-pressured.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Major Examinations:</strong>Major exams such as midterm and final exams are given to students based on the schedule specified in the university calendar. They are also advised to use the CET examination booklet for the major exams. Students who fail to take the major exams due to illness (with a medical certificate) should inform the instructor early so they will be given a special exam before the submission of grades. Otherwise, an “INC with No Final/Midterm exam” will be submitted by the instructor. A calculator  may be used depending on the content of the exam. However, mobile devices are strictly prohibited during major exams. Failure to do so will be considered a form of cheating. Major exams can be also administered online in the same manner how the online quizzes are conducted.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Laboratory Activities:</strong>Laboratory hands-on activities are given to students at every meeting. The laboratory output is graded based on a rubric scorecard. A major laboratory hands-on activity is given to students during the midterm and final exam week.
+                                            <tr>
+                                                <td class="content_pol"><strong>Consultation:</strong>Aside from the regular system of consultation offered by the adviser and/or guidance counselor, the faculty shall provide the student with consultation hours for students to inquire regarding their subject/course, ask for clarification or further explanation of certain topics discussed, or to be discussed in the subject, and other concerns related to the subject. The student should set an appointment at least a day before the consultation to avoid conflicts of schedule. Consultation can be done online through any messaging platform.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="content_pol"><strong>Student Integrity/Academic Honesty Cheating: </strong>Receiving or providing unapproved help in any academic task, test, or treatise. Cheating includes the attempt to use or the actual use of any unauthorized information, educational material, or learning aid in a test or assignment. Cheating includes multiple submissions of any academic exercise more than once for credit without prior authorization and approval of the instructor.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        // https://html2canvas.hertzen.com/configuration
+        // https://rawgit.com/MrRio/jsPDF/master/docs/module-html.html#~html
+        // https://artskydj.github.io/jsPDF/docs/jsPDF.html
+        window.jsPDF = window.jspdf.jsPDF;
+        function generatePdf() {
+            let jsPdf = new jsPDF('l', 'pt', 'legal');
+            var htmlElement = document.getElementById('doc-target');
+            // you need to load html2canvas (and dompurify if you pass a string to html)
+            const header = `
+                <h2>Header Title</h2>
+                <p>This is the header content.</p>
+                `;
+
+            const opt = {
+                callback: function (jsPdf) {
+                    window.open(jsPdf.output('bloburl'));
+                    // to open the generated PDF in browser window
+                    // window.open(jsPdf.output('bloburl'));
+                },
+                margin: [72, 72, 72, 72],
+                autoPaging: 'text',
+                html2canvas: {
+                    allowTaint: true,
+                    dpi: 300,
+                    letterRendering: true,
+                    logging: false,
+                    scale: .6
+                }
+            };
+
+            jsPdf.html(htmlElement, opt);
+        }
+    </script>
+</body>
+
+</html>

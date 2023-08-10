@@ -1,0 +1,151 @@
+.syllabus {
+    font-family: 'Times New Roman' !important;
+    background-color: white !important;
+}
+
+.gfg .row .header_info {
+    height: 110px;
+    border: 1px solid black;
+    float: right;
+}
+.lists{
+    line-height: 1.1;
+}
+
+.gfg .logo {
+    width: 110px;
+}
+.gfg {
+    text-align: justify;
+    /* divides text in 2 columns */
+}
+.gfg .title {
+    text-align: center;
+    font-weight:900;
+    margin: 0px 0px 0px 0px;
+}
+.gfg .sub-text {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+.gfg .two-row {
+    columns: 2;
+}
+
+h1 {
+    color: green;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+.gfg .content_body .text-normal {
+    font-size: 20px;
+}
+
+.gfg .content_body .text-bold {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gfg .content_body .outcomes {
+    font-size: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+
+}
+.gfg .content_body .outcomes th {
+    border: 1px solid black;
+}
+.gfg .content_body .outcomes td {
+    border: 1px solid black;
+}
+
+.gfg .content_body .outcomes .letter_cell {
+    padding-left: 6px;
+    width: 5px;
+    border-right-style: none;
+    vertical-align: top;
+    padding-top:3px;
+    font-size:18px;
+}
+
+.gfg .content_body .info_outcomes {
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+.gfg .content_body .info_outcomes thead th tr td {
+    border: 1px solid black;
+}
+
+.gfg .content_body .info_outcomes tr td:first-child {
+    width: 233px;
+}
+
+.gfg .content_body .info_outcomes .cs_desc {
+    vertical-align: top;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg .content_body .equi_num {
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+
+}
+.gfg .content_body .equi_num thead th {
+    text-align: center;
+    border: 1px solid black;
+
+}
+.gfg .content_body .equi_num tr td {
+    border: 1px solid black;
+
+}
+
+.gfg .content_body .equi_num tr td:nth-child(1) {
+    text-align: center;
+    width: 480px;
+
+}
+
+.gfg .content_body .equi_num tr td:nth-child(2) {
+    text-align: center;
+
+}
+
+.gfg .content_body .class_pol {
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+.gfg .content_body .class_pol tr:nth-child(1) {
+    border: 1px solid black;
+}
+
+.gfg .content_body .class_pol .content_pol {
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+.gfg .content_body .class_pol_2 {
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+.gfg .content_body .class_pol_2 .content_pol {
+    padding-bottom: 30px;
+    text-align: justify;
+}
